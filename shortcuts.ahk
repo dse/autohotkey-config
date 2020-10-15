@@ -80,6 +80,9 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :*?:{<=}::≤                     ; U+2264 LESS-THAN OR EQUAL TO
 :*?:{>=}::≥                     ; U+2265 GREATER-THAN OR EQUAL TO
 
+:*C?:{R}::Я                     ; U+042F CYRILLIC CAPITAL LETTER YA
+:*C?:{Y}::У                     ; U+0423 CYRILLIC CAPITAL LETTER U
+
 ;------------------------------------------------------------------------------
 ; Unicode Emoticons
 ;------------------------------------------------------------------------------
