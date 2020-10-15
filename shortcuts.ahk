@@ -87,4 +87,5 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ; Shift+Win+A reloads this file.
 ;------------------------------------------------------------------------------
 +#a::
-Run, %A_APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup\autohotkey.ahk
+Run, %A_ScriptFullPath%
+Run, %A_ScriptDir%\local.ahk
