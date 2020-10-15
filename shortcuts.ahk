@@ -80,6 +80,14 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :*?:{<=}::≤                     ; U+2264 LESS-THAN OR EQUAL TO
 :*?:{>=}::≥                     ; U+2265 GREATER-THAN OR EQUAL TO
 
+;------------------------------------------------------------------------------
+; Unicode Emoticons
+;------------------------------------------------------------------------------
+; https://gist.github.com/jordanorelli/11229304
+; https://looks.wtf/flipping-tables
+; https://slack-tableflip.herokuapp.com/
+;------------------------------------------------------------------------------
+
 :*?:{shrug}::¯\_(ツ)_/¯
 :*?:{flip}::(╯°□°)╯︵ ┻━┻
 
