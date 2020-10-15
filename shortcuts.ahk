@@ -17,65 +17,65 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ;         C   abbreviation is case sensitive
 ;         ?   will be triggered inside another word
 
-:*?:{ndash}::–                  ; EN DASH
-:*?:{-}::–                      ; EN DASH
-:*?:{mdash}::—                  ; EM DASH
-:*?:{--}::—                     ; EM DASH
-:*C?:{prime}::′                 ; PRIME
-:*C?:{Prime}::″                 ; DOUBLE PRIME
+:*?:{ndash}::–                  ; U+2013 EN DASH
+:*?:{-}::–                      ; U+2013 EN DASH
+:*?:{mdash}::—                  ; U+2014 EM DASH
+:*?:{--}::—                     ; U+2014 EM DASH
+:*C?:{prime}::′                 ; U+2032 PRIME
+:*C?:{Prime}::″                 ; U+2033 DOUBLE PRIME
 
-:*?:{plusmn}::±                 ; PLUS-MINUS SIGN
-:*?:{+-}::±                     ; PLUS-MINUS SIGN
-:*?:{times}::×                  ; MULTIPLICATION SIGN
-:*?:{x}::×                      ; MULTIPLICATION SIGN
-:*?:{divide}::÷                 ; DIVISION SIGN
-:*?:{minus}::−                  ; MINUS SIGN
+:*?:{plusmn}::±                 ; U+00B1 PLUS-MINUS SIGN
+:*?:{+-}::±                     ; U+00B1 PLUS-MINUS SIGN
+:*?:{times}::×                  ; U+00D7 MULTIPLICATION SIGN
+:*?:{x}::×                      ; U+00D7 MULTIPLICATION SIGN
+:*?:{divide}::÷                 ; U+00F7 DIVISION SIGN
+:*?:{minus}::−                  ; U+2212 MINUS SIGN
 
-:*C?:{'E}::É                    ; LATIN CAPITAL LETTER E WITH ACUTE
-:*C?:{'e}::é                    ; LATIN SMALL LETTER E WITH ACUTE
-:*C?:{~N}::Ñ                    ; LATIN CAPITAL LETTER N WITH TILDE
-:*C?:{~n}::ñ                    ; LATIN SMALL LETTER N WITH TILDE
+:*C?:{'E}::É                    ; U+00C9 LATIN CAPITAL LETTER E WITH ACUTE
+:*C?:{'e}::é                    ; U+00E9 LATIN SMALL LETTER E WITH ACUTE
+:*C?:{~N}::Ñ                    ; U+00D1 LATIN CAPITAL LETTER N WITH TILDE
+:*C?:{~n}::ñ                    ; U+00F1 LATIN SMALL LETTER N WITH TILDE
 
-:*?:{euro}::€                   ; EURO SIGN
-:*?:{pound}::£                  ; POUND SIGN
+:*?:{euro}::€                   ; U+20AC EURO SIGN
+:*?:{pound}::£                  ; U+00A3 POUND SIGN
 
-:*?:{nbsp}::                    ; NO-BREAK SPACE
-:*?:{{ }}::                     ; NO-BREAK SPACE
+:*?:{nbsp}::                    ; U+00A0 NO-BREAK SPACE
+:*?:{{ }}::                     ; U+00A0 NO-BREAK SPACE
 
-:*?:{bull}::•                   ; BULLET
-:*?:{*}::•                      ; BULLET
+:*?:{bull}::•                   ; U+2022 BULLET
+:*?:{*}::•                      ; U+2022 BULLET
 
-:*?:{deg}::°                    ; DEGREE SIGN
-:*?:{middot}::·                 ; MIDDLE DOT
+:*?:{deg}::°                    ; U+00B0 DEGREE SIGN
+:*?:{middot}::·                 ; U+00B7 MIDDLE DOT
 
-:*C?:{dagger}::†                ; DAGGER
-:*C?:{Dagger}::‡                ; DOUBLE DAGGER
+:*C?:{dagger}::†                ; U+2020 DAGGER
+:*C?:{Dagger}::‡                ; U+2021 DOUBLE DAGGER
 
-:*?:{larr}::←                   ; LEFTWARDS ARROW
-:*?:{<-}::←                     ; LEFTWARDS ARROW
-:*?:{rarr}::→                   ; RIGHTWARDS ARROW
-:*?:{->}::→                     ; RIGHTWARDS ARROW
-:*?:{uarr}::↑                   ; UPWARDS ARROW
-:*?:{^}::↑                      ; UPWARDS ARROW
-:*?:{darr}::↓                   ; DOWNWARDS ARROW
-:*?:{v}::↓                      ; DOWNWARDS ARROW
-:*?:{harr}::↔                   ; LEFT RIGHT ARROW
-:*?:{<->}::↔                    ; LEFT RIGHT ARROW
-:*?:{<--}::⟵                    ; LONG LEFTWARDS ARROW
-:*?:{-->}::⟶                    ; LONG RIGHTWARDS ARROW
-:*?:{<-->}::⟷                   ; LONG LEFT RIGHT ARROW
+:*?:{larr}::←                   ; U+2190 LEFTWARDS ARROW
+:*?:{<-}::←                     ; U+2190 LEFTWARDS ARROW
+:*?:{rarr}::→                   ; U+2192 RIGHTWARDS ARROW
+:*?:{->}::→                     ; U+2192 RIGHTWARDS ARROW
+:*?:{uarr}::↑                   ; U+2191 UPWARDS ARROW
+:*?:{^}::↑                      ; U+2191 UPWARDS ARROW
+:*?:{darr}::↓                   ; U+2193 DOWNWARDS ARROW
+:*?:{v}::↓                      ; U+2193 DOWNWARDS ARROW
+:*?:{harr}::↔                   ; U+2194 LEFT RIGHT ARROW
+:*?:{<->}::↔                    ; U+2194 LEFT RIGHT ARROW
+:*?:{<--}::⟵                    ; U+27F5 LONG LEFTWARDS ARROW
+:*?:{-->}::⟶                    ; U+27F6 LONG RIGHTWARDS ARROW
+:*?:{<-->}::⟷                   ; U+27F7 LONG LEFT RIGHT ARROW
 
-:*C?:{check}::✓                 ; CHECK MARK
-:*C?:{Check}::✔                 ; HEAVY CHECK MARK
-:*C?:{ballotx}::✗               ; BALLOT X
-:*C?:{Ballotx}::✘               ; HEAVY BALLOT X
-:*C?:{ballotbox}::☐             ; BALLOT BOX
-:*C?:{ballotboxcheck}::☑        ; BALLOT BOX WITH CHECK
-:*C?:{ballotboxx}::☒            ; BALLOT BOX WITH X
+:*C?:{check}::✓                 ; U+2713 CHECK MARK
+:*C?:{Check}::✔                 ; U+2714 HEAVY CHECK MARK
+:*C?:{ballotx}::✗               ; U+2717 BALLOT X
+:*C?:{Ballotx}::✘               ; U+2718 HEAVY BALLOT X
+:*C?:{ballotbox}::☐             ; U+2610 BALLOT BOX
+:*C?:{ballotboxcheck}::☑        ; U+2611 BALLOT BOX WITH CHECK
+:*C?:{ballotboxx}::☒            ; U+2612 BALLOT BOX WITH X
 
-:*?:{?!}::‽                     ; INTERROBANG
-:*?:{!?}::‽                     ; INTERROBANG
-:*?:{interrobang}::‽            ; INTERROBANG
+:*?:{?!}::‽                     ; U+203D INTERROBANG
+:*?:{!?}::‽                     ; U+203D INTERROBANG
+:*?:{interrobang}::‽            ; U+203D INTERROBANG
 
 :*?:{<=}::≤                     ; U+2264 LESS-THAN OR EQUAL TO
 :*?:{>=}::≥                     ; U+2265 GREATER-THAN OR EQUAL TO
