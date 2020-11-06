@@ -65,6 +65,13 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :*?:{-->}::⟶                    ; U+27F6 LONG RIGHTWARDS ARROW
 :*?:{<-->}::⟷                   ; U+27F7 LONG LEFT RIGHT ARROW
 
+:*?:{^^}::↑↑                    ; U+2191 UPWARDS ARROW
+:*?:{vv}::↓↓                    ; U+2193 DOWNWARDS ARROW
+:*?:{^^^}::↑↑↑                  ; U+2191 UPWARDS ARROW
+:*?:{vvv}::↓↓↓                  ; U+2193 DOWNWARDS ARROW
+:*?:{^^^^}::↑↑↑↑                ; U+2191 UPWARDS ARROW
+:*?:{vvvv}::↓↓↓↓                ; U+2193 DOWNWARDS ARROW
+
 :*C?:{check}::✓                 ; U+2713 CHECK MARK
 :*C?:{Check}::✔                 ; U+2714 HEAVY CHECK MARK
 :*C?:{ballotx}::✗               ; U+2717 BALLOT X
