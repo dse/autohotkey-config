@@ -21,6 +21,8 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :*?:{-}::–                      ; U+2013 EN DASH
 :*?:{mdash}::—                  ; U+2014 EM DASH
 :*?:{--}::—                     ; U+2014 EM DASH
+
+; ======= case sensitive =======
 :*C?:{prime}::′                 ; U+2032 PRIME
 :*C?:{Prime}::″                 ; U+2033 DOUBLE PRIME
 
@@ -31,6 +33,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :*?:{divide}::÷                 ; U+00F7 DIVISION SIGN
 :*?:{minus}::−                  ; U+2212 MINUS SIGN
 
+; ======= case sensitive =======
 :*C?:{'E}::É                    ; U+00C9 LATIN CAPITAL LETTER E WITH ACUTE
 :*C?:{'e}::é                    ; U+00E9 LATIN SMALL LETTER E WITH ACUTE
 :*C?:{~N}::Ñ                    ; U+00D1 LATIN CAPITAL LETTER N WITH TILDE
@@ -48,6 +51,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :*?:{deg}::°                    ; U+00B0 DEGREE SIGN
 :*?:{middot}::·                 ; U+00B7 MIDDLE DOT
 
+; ======= case sensitive =======
 :*C?:{dagger}::†                ; U+2020 DAGGER
 :*C?:{Dagger}::‡                ; U+2021 DOUBLE DAGGER
 
@@ -72,6 +76,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :*?:{^^^^}::↑↑↑↑                ; U+2191 UPWARDS ARROW
 :*?:{vvvv}::↓↓↓↓                ; U+2193 DOWNWARDS ARROW
 
+; ======= case sensitive =======
 :*C?:{check}::✓                 ; U+2713 CHECK MARK
 :*C?:{Check}::✔                 ; U+2714 HEAVY CHECK MARK
 :*C?:{ballotx}::✗               ; U+2717 BALLOT X
@@ -87,8 +92,13 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :*?:{<=}::≤                     ; U+2264 LESS-THAN OR EQUAL TO
 :*?:{>=}::≥                     ; U+2265 GREATER-THAN OR EQUAL TO
 
+; ======= case sensitive =======
 :*C?:{R}::Я                     ; U+042F CYRILLIC CAPITAL LETTER YA
 :*C?:{Y}::У                     ; U+0423 CYRILLIC CAPITAL LETTER U
+
+; ======= case sensitive =======
+:*C?:{Lambda}::Λ		; GREEK CAPITAL LETTER LAMBDA
+:*C?:{lambda}::λ		; GREEK SMALL LETTER LAMBDA
 
 ;------------------------------------------------------------------------------
 ; Unicode Emoticons
