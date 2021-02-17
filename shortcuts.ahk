@@ -17,6 +17,11 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ;         C   abbreviation is case sensitive
 ;         ?   will be triggered inside another word
 
+; avoid replacing, e.g., ${mdash} with $—
+:*?:${::${{}
+:*?:%{::%{{}
+:*?:\{::\{{}
+
 :*?:{ndash}::–                  ; U+2013 EN DASH
 :*?:{-}::–                      ; U+2013 EN DASH
 :*?:{mdash}::—                  ; U+2014 EM DASH
