@@ -42,6 +42,16 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :*C?:{'e}::é                    ; U+00E9 LATIN SMALL LETTER E WITH ACUTE
 :*C?:{~N}::Ñ                    ; U+00D1 LATIN CAPITAL LETTER N WITH TILDE
 :*C?:{~n}::ñ                    ; U+00F1 LATIN SMALL LETTER N WITH TILDE
+:*C?:{`E}::È                    ; U+00C8 LATIN CAPITAL LETTER E WITH GRAVE
+:*C?:{`e}::è                    ; U+00E8 LATIN SMALL LETTER E WITH GRAVE
+:*C?:{,C}::Ç                    ; U+00C7 LATIN CAPITAL LETTER C WITH CEDILLA
+:*C?:{,c}::ç                    ; U+00E7 LATIN SMALL LETTER C WITH CEDILLA
+:*C?:{"O}::Ö                    ; U+00D6 LATIN CAPITAL LETTER O WITH DIAERESIS
+:*C?:{"o}::ö                    ; U+00F6 LATIN SMALL LETTER O WITH DIAERESIS
+:*C?:{"E}::Ë                    ; U+00CB LATIN CAPITAL LETTER E WITH DIAERESIS
+:*C?:{"e}::ë                    ; U+00EB LATIN SMALL LETTER E WITH DIAERESIS
+:*C?:{`A}::À                    ; U+00C0 LATIN CAPITAL LETTER A WITH GRAVE
+:*C?:{`a}::à                    ; U+00E0 LATIN SMALL LETTER A WITH GRAVE
 :*C?:{schwa}::ə                 ; U+0259 LATIN SMALL LETTER SCHWA
 
 :*?:{euro}::€                   ; U+20AC EURO SIGN
