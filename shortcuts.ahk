@@ -21,6 +21,10 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :*?:{-}::–                      ; U+2013 EN DASH
 :*?:{mdash}::—                  ; U+2014 EM DASH
 :*?:{--}::—                     ; U+2014 EM DASH
+:*?:{ldquo}::“                  ; U+201C LEFT DOUBLE QUOTATION MARK
+:*?:{rdquo}::”                  ; U+201D RIGHT DOUBLE QUOTATION MARK
+:*?:{lsquo}::‘                  ; U+2018 LEFT SINGLE QUOTATION MARK
+:*?:{rsquo}::’                  ; U+2019 RIGHT SINGLE QUOTATION MARK
 
 ; ======= case sensitive =======
 :*C?:{prime}::′                 ; U+2032 PRIME
@@ -38,6 +42,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :*C?:{'e}::é                    ; U+00E9 LATIN SMALL LETTER E WITH ACUTE
 :*C?:{~N}::Ñ                    ; U+00D1 LATIN CAPITAL LETTER N WITH TILDE
 :*C?:{~n}::ñ                    ; U+00F1 LATIN SMALL LETTER N WITH TILDE
+:*C?:{schwa}::ə                 ; U+0259 LATIN SMALL LETTER SCHWA
 
 :*?:{euro}::€                   ; U+20AC EURO SIGN
 :*?:{pound}::£                  ; U+00A3 POUND SIGN
