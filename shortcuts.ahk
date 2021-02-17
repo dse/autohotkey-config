@@ -61,8 +61,12 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :*C?:{"u}::ü                    ; U+00FC LATIN SMALL LETTER U WITH DIAERESIS
 
 :*?:{schwa}::ə                  ; U+0259 LATIN SMALL LETTER SCHWA
+
 :*?:{euro}::€                   ; U+20AC EURO SIGN
 :*?:{pound}::£                  ; U+00A3 POUND SIGN
+:*?:{yen}::¥                    ; U+00A5 YEN SIGN
+:*?:{currency}::¤               ; U+00A4 CURRENCY SIGN
+:*?:{cent}::¢                   ; U+00A2 CENT SIGN
 
 :*?:{nbsp}::                    ; U+00A0 NO-BREAK SPACE
 :*?:{{ }}::                     ; U+00A0 NO-BREAK SPACE
@@ -113,6 +117,54 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 :*?:{<=}::≤                     ; U+2264 LESS-THAN OR EQUAL TO
 :*?:{>=}::≥                     ; U+2265 GREATER-THAN OR EQUAL TO
+:*?:{!=}::≠                     ; U+2260 NOT EQUAL TO
+:*?:{/=}::≠                     ; U+2260 NOT EQUAL TO
+:*?:{sm}::℠                     ; U+2120 SERVICE MARK
+:*?:{tm}::™                     ; U+2122 TRADE MARK SIGN
+:*C?:{c}::©                     ; U+00A9 COPYRIGHT SIGN
+:*C?:{r}::®                     ; U+00AE REGISTERED SIGN
+:*?:{1/2}::½                    ; U+00BD VULGAR FRACTION ONE HALF
+:*?:{1/4}::¼                    ; U+00BC VULGAR FRACTION ONE QUARTER
+:*?:{3/4}::¾                    ; U+00BE VULGAR FRACTION THREE QUARTERS
+:*?:{1/3}::⅓                    ; U+2153 VULGAR FRACTION ONE THIRD
+:*?:{2/3}::⅔                    ; U+2154 VULGAR FRACTION TWO THIRDS
+:*C?:{No}::№                    ; U+2116 NUMERO SIGN
+:*C?:{Rx}::℞                    ; U+211E PRESCRIPTION TAKE
+:*?:{command}::⌘                ; U+2318 PLACE OF INTEREST SIGN
+:*?:{cmd}::⌘                    ; U+2318 PLACE OF INTEREST SIGN
+:*?:{option}::⌥                 ; U+2325 OPTION KEY
+:*?:{opt}::⌥                    ; U+2325 OPTION KEY
+:*?:{return}::⏎                 ; U+23CE RETURN SYMBOL
+:*?:{enter}::⏎                  ; U+23CE RETURN SYMBOL
+:*?:{eject}::⏏                  ; U+23CF EJECT SYMBOL
+:*?:{lozenge}::◊                ; U+25CA LOZENGE
+:*?:{loz}::◊                    ; U+25CA LOZENGE
+:*?:{female}::♀                 ; U+2640 FEMALE SIGN
+:*?:{male}::♂                   ; U+2642 MALE SIGN
+:*?:{music}::♫                  ; U+266B BEAMED EIGHTH NOTES
+:*?:{snowman}::☃                ; U+2603 SNOWMAN
+:*?:{section}::§                ; U+00A7 SECTION SIGN
+:*?:{sec}::§                    ; U+00A7 SECTION SIGN
+:*?:{paragraph}::¶              ; U+00B6 PILCROW SIGN
+:*?:{para}::¶                   ; U+00B6 PILCROW SIGN
+:*?:{pilcrow}::¶                ; U+00B6 PILCROW SIGN
+:*?:{micro}::µ                  ; U+00B5 MICRO SIGN
+:*?:{not}::¬                    ; U+00AC NOT SIGN
+:*?:{!}::¡                      ; U+00A1 INVERTED EXCLAMATION MARK
+:*?:{?}::¿                      ; U+00BF INVERTED QUESTION MARK
+:*?:{<<}::«                     ; U+00AB LEFT-POINTING DOUBLE ANGLE QUOTATION MARK
+:*?:{>>}::»                     ; U+00BB RIGHT-POINTING DOUBLE ANGLE QUOTATION MARK
+
+:*?:{`:-)}::☺                   ; U+263A WHITE SMILING FACE
+:*?:{`:-(}::☹                   ; U+2639 WHITE FROWNING FACE
+
+; ======= case sensitive =======
+:*C?:{AE}::Æ                    ; U+00C6 LATIN CAPITAL LETTER AE
+:*C?:{ae}::æ                    ; U+00E6 LATIN SMALL LETTER AE
+:*C?:{OE}::Œ                    ; U+0152 LATIN CAPITAL LIGATURE OE
+:*C?:{oe}::œ                    ; U+0153 LATIN SMALL LIGATURE OE
+:*C?:{SS}::ẞ                    ; U+1E9E LATIN CAPITAL LETTER SHARP S
+:*C?:{ss}::ß                    ; U+00DF LATIN SMALL LETTER SHARP S
 
 ; ======= case sensitive =======
 :*C?:{R}::Я                     ; U+042F CYRILLIC CAPITAL LETTER YA
