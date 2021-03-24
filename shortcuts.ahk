@@ -74,6 +74,8 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :*?:{2/3}::⅔                    ; U+2154 VULGAR FRACTION TWO THIRDS
 :*?:{micro}::µ                  ; U+00B5 MICRO SIGN
 :*?:{not}::¬                    ; U+00AC NOT SIGN
+:*?:{ohm}::Ω                    ; U+2126 OHM SIGN
+:*?:{angstrom}::Å               ; U+212B ANGSTROM SIGN
 
 ; ======= currencies =======
 :*?:{euro}::€                   ; U+20AC EURO SIGN
@@ -129,6 +131,12 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :*?:{female}::♀                 ; U+2640 FEMALE SIGN
 :*?:{male}::♂                   ; U+2642 MALE SIGN
 :*?:{snowman}::☃                ; U+2603 SNOWMAN
+:*?:{sun}::☼
+
+;;; U+2660 9824 ♠ BLACK SPADE SUIT
+;;; U+2661 9825 ♡ WHITE HEART SUIT
+;;; U+2662 9826 ♢ WHITE DIAMOND SUIT
+;;; U+2663 9827 ♣ BLACK CLUB SUIT
 
 :*?:{bull}::•                   ; U+2022 BULLET
 :*?:{*}::•                      ; U+2022 BULLET
@@ -163,14 +171,17 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :*C?:{ss}::ß                    ; U+00DF LATIN SMALL LETTER SHARP S
 
 :*?:{schwa}::ə                  ; U+0259 LATIN SMALL LETTER SCHWA
+:*?:{f}::ƒ                      ; U+0192 LATIN SMALL LETTER F WITH HOOK
 
 ; ======= ironic cyrillic =======
 :*C?:{R}::Я                     ; U+042F CYRILLIC CAPITAL LETTER YA
 :*C?:{Y}::У                     ; U+0423 CYRILLIC CAPITAL LETTER U
 
 ; ======= greek =======
-:*C?:{Lambda}::Λ		; GREEK CAPITAL LETTER LAMBDA
-:*C?:{lambda}::λ		; GREEK SMALL LETTER LAMBDA
+:*C?:{Lambda}::Λ                ; U+039B GREEK CAPITAL LETTER LAMDA
+:*C?:{lambda}::λ                ; U+03BB GREEK SMALL LETTER LAMDA
+:*C?:{Lamda}::Λ                 ; U+039B GREEK CAPITAL LETTER LAMDA
+:*C?:{lamda}::λ                 ; U+03BB GREEK SMALL LETTER LAMDA
 
 ; ======= emoticons and silliness =======
 ; https://gist.github.com/jordanorelli/11229304
@@ -182,6 +193,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :*?:{`:-)}::☺                   ; U+263A WHITE SMILING FACE
 :*?:{`:-(}::☹                   ; U+2639 WHITE FROWNING FACE
 :*?:{music}::♫                  ; U+266B BEAMED EIGHTH NOTES
+:*?:{music2}::♪
 
 ;------------------------------------------------------------------------------
 ; Shift+Win+A reloads this file.
