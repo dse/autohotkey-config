@@ -1,0 +1,47 @@
+#!/usr/bin/env perl
+use warnings;
+use strict;
+use v5.10.0;
+use utf8;
+
+#------------------------------------------------------------------------------
+use File::Basename qw(basename);
+our $PROGNAME = basename($0);
+
+#------------------------------------------------------------------------------
+use open IO => qw(:locale);
+use Encode::Locale;
+use Encode qw(decode);
+BEGIN {
+    @ARGV = map { decode('locale', $_, Encode::FB_CROAK) } @ARGV;
+}
+
+#------------------------------------------------------------------------------
+use Unicode::UCD qw(charinfo);
+
+while (<>) {
+    s{\R\z}{};                  # safer chomp
+    if (m{^\s*
+          :
+          ((?:[^: `]|`.)+)
+          :
+          ((?:[^: `]|`.)+)
+          ::
+          (\S)
+          (\s+;.*)?
+          \s*$}xi) {
+        my ($options, $abbr, $text) = ($1, $2, $3);
+        my $codepoint = ord($3);
+        my $charinfo = charinfo($codepoint);
+        my $charname = defined $charinfo ? $charinfo->{name} : undef;
+        if ($charname !~ m{\S}) { # does not contain non-whitespace
+            $charname = undef;
+        }
+        my $hotstring = sprintf(':%s:%s::%s', $options, $abbr, $text);
+        $_ = sprintf('%-28s    ; U+%04X', $hotstring, ord($text));
+        if (defined $charname) {
+            $_ .= ' ' . $charname;
+        }
+    }
+    print "$_\n";
+}
