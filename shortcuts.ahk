@@ -17,10 +17,14 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ;         C   abbreviation is case sensitive
 ;         ?   will be triggered inside another word
 
-; avoid replacing, e.g., ${mdash} with $—
-:*?:${::${{}
-:*?:%{::%{{}
-:*?:\{::\{{}
+; avoid replacing {<whatever>} with <whatever> if immediately preceded by
+; certain characters.
+:*?:${::${{}                    ; avoid replacing ${<whatever>} with <whatever>
+:*?:%{::%{{}                    ; avoid replacing %{<whatever>} with <whatever>
+:*?:\{::\{{}                    ; avoid replacing \{<whatever>} with <whatever>
+:*?:{{::{{}{{}                  ; avoid replacing {{<whatever>} with <whatever>
+; { must be enclosed in braces, hence {{}
+;     - https://www.autohotkey.com/docs/misc/EscapeChar.htm#Remarks
 
 ; ======= typographic =======
 :*?:{!}::¡                      ; U+00A1 INVERTED EXCLAMATION MARK
@@ -48,6 +52,14 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 :*C?:{dagger}::†                ; U+2020 DAGGER
 :*C?:{Dagger}::‡                ; U+2021 DOUBLE DAGGER
+
+; ======= spaces =======
+:*?:{enquad}::                  ; U+2000 EN QUAD
+:*?:{emquad}::                  ; U+2001 EM QUAD
+:*?:{enspace}::                 ; U+2002 EN SPACE
+:*?:{emspace}::                 ; U+2003 EM SPACE
+:*?:{hair}::                    ; U+200A HAIR SPACE
+:*?:{thin}::                    ; U+2009 THIN SPACE
 
 ; ======= intellectual property =======
 :*?:{sm}::℠                     ; U+2120 SERVICE MARK
