@@ -20,6 +20,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ; avoid replacing {<whatever>} with <whatever> if immediately preceded by
 ; certain characters.
 :*?:${::${{}                    ; avoid replacing ${<whatever>} with <whatever>
+;                               ;     by "replacing" ${ with ${
 :*?:%{::%{{}                    ; avoid replacing %{<whatever>} with <whatever>
 :*?:\{::\{{}                    ; avoid replacing \{<whatever>} with <whatever>
 :*?:{{::{{}{{}                  ; avoid replacing {{<whatever>} with <whatever>
