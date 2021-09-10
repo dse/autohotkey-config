@@ -23,7 +23,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :*?:%{::%{{}                    ; avoid replacing %{<whatever>} with <whatever>
 :*?:\{::\{{}                    ; avoid replacing \{<whatever>} with <whatever>
 :*?:{{::{{}{{}                  ; avoid replacing {{<whatever>} with <whatever>
-; { must be enclosed in braces, hence {{}
+; `{` must be enclosed in braces, hence `{{}`
 ;     - https://www.autohotkey.com/docs/misc/EscapeChar.htm#Remarks
 
 ; ======= typographic =======
@@ -94,6 +94,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :*?:{pound}::£                  ; U+00A3 POUND SIGN
 :*?:{yen}::¥                    ; U+00A5 YEN SIGN
 :*?:{currency}::¤               ; U+00A4 CURRENCY SIGN
+:*?:{curren}::¤                 ; U+00A4 CURRENCY SIGN
 :*?:{cent}::¢                   ; U+00A2 CENT SIGN
 
 ; ======= arrows =======
