@@ -20,10 +20,10 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ; Avoid replacing {<stuff>} with <stuff> if immed'ly preceded by certain chars.
 ; In replacement text, use `{{}` or `{}}` to specify literal `{` or `}`.
 
-:*?:${::${{}                    ; avoid replacing ${<whatever>} with <whatever>
-:*?:%{::%{{}                    ; avoid replacing %{<whatever>} with <whatever>
-:*?:\{::\{{}                    ; avoid replacing \{<whatever>} with <whatever>
-:*?:{{::{{}{{}                  ; avoid replacing {{<whatever>} with <whatever>
+:*?:${::${{}
+:*?:%{::%{{}
+:*?:\{::\{{}
+:*?:{{::{{}{{}
 
 ; ======= typographic =======
 :*?:{!}::¡                      ; U+00A1 INVERTED EXCLAMATION MARK
