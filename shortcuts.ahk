@@ -17,15 +17,13 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ;         C   abbreviation is case sensitive
 ;         ?   will be triggered inside another word
 
-; avoid replacing {<whatever>} with <whatever> if immediately preceded by
-; certain characters.
+; Avoid replacing {<stuff>} with <stuff> if immed'ly preceded by certain chars.
+; In replacement text, use `{{}` or `{}}` to specify literal `{` or `}`.
+
 :*?:${::${{}                    ; avoid replacing ${<whatever>} with <whatever>
-;                               ;     by "replacing" ${ with ${
 :*?:%{::%{{}                    ; avoid replacing %{<whatever>} with <whatever>
 :*?:\{::\{{}                    ; avoid replacing \{<whatever>} with <whatever>
 :*?:{{::{{}{{}                  ; avoid replacing {{<whatever>} with <whatever>
-; `{` must be enclosed in braces, hence `{{}`
-;     - https://www.autohotkey.com/docs/misc/EscapeChar.htm#Remarks
 
 ; ======= typographic =======
 :*?:{!}::¡                      ; U+00A1 INVERTED EXCLAMATION MARK
