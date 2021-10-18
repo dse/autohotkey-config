@@ -18,12 +18,20 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ;         ?   will be triggered inside another word
 
 ; Avoid replacing {<stuff>} with <stuff> if immed'ly preceded by certain chars.
-; In replacement text, use `{{}` or `{}}` to specify literal `{` or `}`.
+; In replacement text, to specify literal `{` or `}`, use `{{}` or `{}}`.
 
 :*?:${::${{}
 :*?:%{::%{{}
 :*?:\{::\{{}
 :*?:{{::{{}{{}
+
+; 'm', 's', etc. must be preceded by punctuation
+:*:m{::m{{}
+:*:q{::q{{}
+:*:s{::s{{}
+:*:qw{::qw{{}
+:*:qr{::qr{{}
+:*:tr{::tr{{}
 
 ; ======= typographic =======
 :*?:{!}::¡                      ; U+00A1 INVERTED EXCLAMATION MARK
