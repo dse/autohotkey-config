@@ -20,12 +20,17 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ; Avoid replacing {<stuff>} with <stuff> if immed'ly preceded by certain chars.
 ; In replacement text, to specify literal `{` or `}`, use `{{}` or `{}}`.
 
-:*?:${::${{}
-:*?:%{::%{{}
-:*?:\{::\{{}
-:*?:{{::{{}{{}
+:*?:${::${{}            ; perl: protect ${xxx} --- also JavaScript
+:*?:@{::@{{}            ; perl:         @{xxx}
+:*?:%{::%{{}            ; perl:         %{xxx}
+:*?:\{::\{{}            ; perl:         \{xxx}
+:*?:}{::{}}{{}          ; perl:         ${xxx}{yyy}
+:*?:->{::->{{}          ; perl:         $xxx->{yyy}
+:*?:`{::`{{}            ; markdown: protect {xxx} surrounded by backticks
+:*?:{{::{{}{{}          ; nunjucks, etc.: protect {{xxx}}
 
-; 'm', 's', etc. must be preceded by punctuation
+; 'm', 's', etc. must be preceded by punct. to protect against replacement.
+; Obviously we want to replace when {...} is preceded by a regular word.
 :*:m{::m{{}
 :*:q{::q{{}
 :*:s{::s{{}
