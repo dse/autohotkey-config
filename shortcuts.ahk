@@ -1,6 +1,4 @@
-﻿; -*- mode: text; comment-start: "; " -*-
-
-#SingleInstance Force
+﻿#SingleInstance Force
 
 #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 ; #Warn  ; Enable warnings to assist with detecting common errors.
@@ -20,14 +18,14 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ; Avoid replacing {<stuff>} with <stuff> if immed'ly preceded by certain chars.
 ; In replacement text, to specify literal `{` or `}`, use `{{}` or `{}}`.
 
-:*?:${::${{}            ; perl: protect ${xxx} --- also JavaScript
-:*?:@{::@{{}            ; perl:         @{xxx}
-:*?:%{::%{{}            ; perl:         %{xxx}
-:*?:\{::\{{}            ; perl:         \{xxx}
-:*?:}{::{}}{{}          ; perl:         ${xxx}{yyy}
-:*?:->{::->{{}          ; perl:         $xxx->{yyy}
-:*?:`{::`{{}            ; markdown: protect {xxx} surrounded by backticks
-:*?:{{::{{}{{}          ; nunjucks, etc.: protect {{xxx}}
+:*?:${::${{}                    ; protect ${xxx}        perl, javascript
+:*?:@{::@{{}                    ;    "    @{xxx}        perl
+:*?:%{::%{{}                    ;    "    %{xxx}        perl
+:*?:\{::\{{}                    ;    "    \{xxx}        perl?
+:*?:}{::{}}{{}                  ;    "    ${a}{xxx}     perl
+:*?:->{::->{{}                  ;    "    $a->{xxx}     perl
+:*?:``{::``{{}                  ;    "    `{xxx}`       markdown
+:*?:{{::{{}{{}                  ;    "    {{xxx}}       nunjucks, etc.
 
 ; 'm', 's', etc. must be preceded by punct. to protect against replacement.
 ; Obviously we want to replace when {...} is preceded by a regular word.
