@@ -1,4 +1,4 @@
-﻿; -*- text -*-
+﻿; -*- mode: text; comment-start: "; " -*-
 
 #SingleInstance Force
 
