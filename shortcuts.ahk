@@ -189,6 +189,8 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :*?:@music@::♫                  ; U+266B BEAMED EIGHTH NOTES
 :*?:@music2@::♪
 
+:*?:@hosts@::c`:\windows\system32\drivers\etc\hosts
+
 ;------------------------------------------------------------------------------
 ; Shift+Win+A reloads this file.
 ;------------------------------------------------------------------------------
