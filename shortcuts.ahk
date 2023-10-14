@@ -1,4 +1,5 @@
 ; -*- coding: utf-8-dos -*-
+; for AHK 1.1 https://www.autohotkey.com/docs/v1/
 
 #SingleInstance Force
 
@@ -191,8 +192,52 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 :*?:@hosts@::c`:\windows\system32\drivers\etc\hosts
 
+:*?:@nodefs@::const fs = require('node:fs');
+:*?:@nodefsp@::const fsp = require('node:fs/promises');
+:*?:@nodefetch@::const fetch = require('node-fetch');
+:*?:@nodepath@::const path = require('node:path');
+:*?:@through2@::const through2 = require('through2');
+:*?:@nodeutil@::const util = require('node:util');
+:*?:@gulp@::const gulp = require('gulp');
+:*?:@devmode@::const devMode = process.env.NODE_ENV {!}== 'production';
+:*?:@exports@::module.exports ={ }
+:*?:@ni@::npm install{ }
+:*?:@agi@::apt-get -y install{ }
+:*?:@agu@::apt-get update
+:*?:@nunjucks@::const nunjucks = require('nunjucks');
+:*?:@sprintfjs@::const {{} sprintf {}} = require('sprintf-js');
+:*?:@nodegetopt@::const getopt = require('posix-getopt');
+:*?:@compactify@::const compactify = require('@rfxtechnologies/json-compactify');
+:*?:@dayjs@::const dayjs = require('dayjs');
+; { } at EOL means type a space there
+; {!} means type an exclamation mark
+; {{} inserts a {
+; {}} inserts a }
+
+:*?:@^0@::⁰
+:*?:@^1@::¹
+:*?:@^2@::²
+:*?:@^3@::³
+:*?:@^4@::⁴
+:*?:@^5@::⁵
+:*?:@^6@::⁶
+:*?:@^7@::⁵
+:*?:@^8@::⁶
+:*?:@^9@::⁹
+
+:*?:@_0@::₀
+:*?:@_1@::₁
+:*?:@_2@::₂
+:*?:@_3@::₃
+:*?:@_4@::₄
+:*?:@_5@::₅
+:*?:@_6@::₆
+:*?:@_7@::₇
+:*?:@_8@::₈
+:*?:@_9@::₉
+
 ;------------------------------------------------------------------------------
-; Shift+Win+A reloads this file.
+; SHIFT+WIN+A RELOADS THIS FILE.
 ;------------------------------------------------------------------------------
   +#a::
 Run, %A_ScriptFullPath%
