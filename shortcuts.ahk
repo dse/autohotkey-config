@@ -209,6 +209,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :*?:@nodegetopt@::const getopt = require('posix-getopt');
 :*?:@compactify@::const compactify = require('@rfxtechnologies/json-compactify');
 :*?:@dayjs@::const dayjs = require('dayjs');
+:*?:@lodash@::const _ = require('lodash');
 ; { } at EOL means type a space there
 ; {!} means type an exclamation mark
 ; {{} inserts a {
