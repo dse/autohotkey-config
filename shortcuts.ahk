@@ -210,6 +210,11 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :*?:@compactify@::const compactify = require('@rfxtechnologies/json-compactify');
 :*?:@dayjs@::const dayjs = require('dayjs');
 :*?:@lodash@::const _ = require('lodash');
+
+:*?:@j@::const J = JSON.stringify;
+:*?:@jj@::const JJ = function (value, replacer, space) {{} return JSON.stringify(value, replacer, space ?? 4); {}};
+:*?:@c1@::const C1 = (options?.verbosity ?? 0) >= 1 ? console : undefined;
+:*?:@c2@::const C2 = (options?.verbosity ?? 0) >= 2 ? console : undefined;
 ; { } at EOL means type a space there
 ; {!} means type an exclamation mark
 ; {{} inserts a {
