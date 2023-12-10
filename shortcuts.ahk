@@ -142,8 +142,8 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :*C?:@Prime@::″                 ; U+2033 DOUBLE PRIME
 
 ; ======= latin =======
-:*C?:@`A@::À                    ; U+00C0 LATIN CAPITAL LETTER A WITH GRAVE
-:*C?:@`a@::à                    ; U+00E0 LATIN SMALL LETTER A WITH GRAVE
+:*C?:@``A@::À                    ; U+00C0 LATIN CAPITAL LETTER A WITH GRAVE
+:*C?:@``a@::à                    ; U+00E0 LATIN SMALL LETTER A WITH GRAVE
 :*C?:@,C@::Ç                    ; U+00C7 LATIN CAPITAL LETTER C WITH CEDILLA
 :*C?:@,c@::ç                    ; U+00E7 LATIN SMALL LETTER C WITH CEDILLA
 :*C?:@`E@::È                    ; U+00C8 LATIN CAPITAL LETTER E WITH GRAVE
@@ -196,6 +196,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :*?:@nodefsp@::const fsp = require('node:fs/promises');
 :*?:@nodefetch@::const fetch = require('node-fetch');
 :*?:@nodepath@::const path = require('node:path');
+:*?:@nodereadline@::const readline = require('node:readline');
 :*?:@through2@::const through2 = require('through2');
 :*?:@nodeutil@::const util = require('node:util');
 :*?:@gulp@::const gulp = require('gulp');
@@ -210,6 +211,16 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :*?:@compactify@::const compactify = require('@rfxtechnologies/json-compactify');
 :*?:@dayjs@::const dayjs = require('dayjs');
 :*?:@lodash@::const _ = require('lodash');
+:*?:@nodecolors@::const colors = require('colors/safe');
+:*?:@nodecolors2@::const colors = require('@colors/colors/safe');
+:*?:@mergeable@::const isMergeableObject = require('is-mergeable-object');
+
+:*?:@j@::const J = JSON.stringify;
+:*?:@jj@::const JJ = function (value, replacer, space) {{} return JSON.stringify(value, replacer, space ?? 4); {}};
+:*?:@c1@::const C1 = (options?.verbosity ?? 0) >= 1 ? console : undefined;
+:*?:@c2@::const C2 = (options?.verbosity ?? 0) >= 2 ? console : undefined;
+:*?:@c3@::const C3 = (options?.verbosity ?? 0) >= 3 ? console : undefined;
+
 ; { } at EOL means type a space there
 ; {!} means type an exclamation mark
 ; {{} inserts a {
