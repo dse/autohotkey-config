@@ -214,12 +214,19 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :*?:@nodecolors@::const colors = require('colors/safe');
 :*?:@nodecolors2@::const colors = require('@colors/colors/safe');
 :*?:@mergeable@::const isMergeableObject = require('is-mergeable-object');
+:*?:@isplainobject@::const {{} isPlainObject {}} = require('is-plain-object');
+:*?:@nodemodule@::const Module = require('node:module');
+:*?:@nodetransform@::const {{} Transform {}} = require('node:stream');
+:*?:@nodestream@::const stream = require('node:stream');
 
 :*?:@j@::const J = JSON.stringify;
 :*?:@jj@::const JJ = function (value, replacer, space) {{} return JSON.stringify(value, replacer, space ?? 4); {}};
 :*?:@c1@::const C1 = (options?.verbosity ?? 0) >= 1 ? console : undefined;
 :*?:@c2@::const C2 = (options?.verbosity ?? 0) >= 2 ? console : undefined;
 :*?:@c3@::const C3 = (options?.verbosity ?? 0) >= 3 ? console : undefined;
+
+:*?:@export_tags@::our %EXPORT_TAGS = (all => [@EXPORT_OK]);
+:*?:@exporter@::use base "Exporter";
 
 ; { } at EOL means type a space there
 ; {!} means type an exclamation mark
