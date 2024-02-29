@@ -218,6 +218,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :*?:@nodemodule@::const Module = require('node:module');
 :*?:@nodetransform@::const {{} Transform {}} = require('node:stream');
 :*?:@nodestream@::const stream = require('node:stream');
+:*?:@nodeassert@::const assert = require('node:assert');
 
 :*?:@j@::const J = JSON.stringify;
 :*?:@jj@::const JJ = function (value, replacer, space) {{} return JSON.stringify(value, replacer, space ?? 4); {}};
