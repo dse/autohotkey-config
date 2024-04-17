@@ -214,11 +214,14 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :*?:@nodecolors@::const colors = require('colors/safe');
 :*?:@nodecolors2@::const colors = require('@colors/colors/safe');
 :*?:@mergeable@::const isMergeableObject = require('is-mergeable-object');
+:*?:@ismergeable@::const isMergeableObject = require('is-mergeable-object');
+:*?:@ismergeableobject@::const isMergeableObject = require('is-mergeable-object');
 :*?:@isplainobject@::const {{} isPlainObject {}} = require('is-plain-object');
 :*?:@nodemodule@::const Module = require('node:module');
 :*?:@nodetransform@::const {{} Transform {}} = require('node:stream');
 :*?:@nodestream@::const stream = require('node:stream');
 :*?:@nodeassert@::const assert = require('node:assert');
+:*?:@nodeyn@::const assert = require('yn');
 
 :*?:@j@::const J = JSON.stringify;
 :*?:@jj@::const JJ = function (value, replacer, space) {{} return JSON.stringify(value, replacer, space ?? 4); {}};
@@ -226,8 +229,14 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :*?:@c2@::const C2 = (options?.verbosity ?? 0) >= 2 ? console : undefined;
 :*?:@c3@::const C3 = (options?.verbosity ?? 0) >= 3 ? console : undefined;
 
+:*?:@v1@::const VERBOSE = (mainProgramOptions?.verbosity ?? 0) >= 1 ? console : undefined;
+:*?:@v2@::const VERBOSE_2 = (mainProgramOptions?.verbosity ?? 0) >= 2 ? console : undefined;
+:*?:@v3@::const VERBOSE_3 = (mainProgramOptions?.verbosity ?? 0) >= 3 ? console : undefined;
+:*?:@dr@::const DRY_RUN = mainProgramOptions?.dryRun ? console : undefined;
+
 :*?:@export_tags@::our %EXPORT_TAGS = (all => [@EXPORT_OK]);
 :*?:@exporter@::use base "Exporter";
+:*?:@eventemitter@::const EventEmitter = require('node:events');
 
 ; { } at EOL means type a space there
 ; {!} means type an exclamation mark
