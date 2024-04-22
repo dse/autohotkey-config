@@ -221,7 +221,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :*?:@nodetransform@::const {{} Transform {}} = require('node:stream');
 :*?:@nodestream@::const stream = require('node:stream');
 :*?:@nodeassert@::const assert = require('node:assert');
-:*?:@nodeyn@::const assert = require('yn');
+:*?:@nodeyn@::const yn = require('yn');
 
 :*?:@j@::const J = JSON.stringify;
 :*?:@jj@::const JJ = function (value, replacer, space) {{} return JSON.stringify(value, replacer, space ?? 4); {}};
@@ -237,6 +237,8 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :*?:@export_tags@::our %EXPORT_TAGS = (all => [@EXPORT_OK]);
 :*?:@exporter@::use base "Exporter";
 :*?:@eventemitter@::const EventEmitter = require('node:events');
+:*?:@posthtml@::const posthtml = require('posthtml');
+
 
 ; { } at EOL means type a space there
 ; {!} means type an exclamation mark
