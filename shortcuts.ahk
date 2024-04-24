@@ -211,8 +211,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :*?:@compactify@::const compactify = require('@rfxtechnologies/json-compactify');
 :*?:@dayjs@::const dayjs = require('dayjs');
 :*?:@lodash@::const _ = require('lodash');
-:*?:@nodecolors@::const colors = require('colors/safe');
-:*?:@nodecolors2@::const colors = require('@colors/colors/safe');
+:*?:@nodecolors@::const colors = require('@colors/colors/safe');
 :*?:@mergeable@::const isMergeableObject = require('is-mergeable-object');
 :*?:@ismergeable@::const isMergeableObject = require('is-mergeable-object');
 :*?:@ismergeableobject@::const isMergeableObject = require('is-mergeable-object');
