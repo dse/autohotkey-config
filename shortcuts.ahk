@@ -238,6 +238,9 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :*?:@eventemitter@::const EventEmitter = require('node:events');
 :*?:@posthtml@::const posthtml = require('posthtml');
 
+:*?:@nodefse@::const fse = require('fs-extra');
+:*?:@nodechildprocess@::const childProcess = require('child-process');
+:*?:@nodespawn@::const { spawn } = require('child-process');
 
 ; { } at EOL means type a space there
 ; {!} means type an exclamation mark
