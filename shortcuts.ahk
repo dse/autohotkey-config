@@ -241,6 +241,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :*?:@nodefse@::const fse = require('fs-extra');
 :*?:@nodechildprocess@::const childProcess = require('child-process');
 :*?:@nodespawn@::const { spawn } = require('child-process');
+:*?:@nodespawnsync@::const { spawnSync } = require('child-process');
 
 ; { } at EOL means type a space there
 ; {!} means type an exclamation mark
@@ -268,6 +269,9 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :*?:@_7@::₇
 :*?:@_8@::₈
 :*?:@_9@::₉
+
+
+:*?:@lilbits@::https://media1.tenor.com/m/Z64hCFw89QYAAAAd/lil-bits.gif
 
 ;------------------------------------------------------------------------------
 ; SHIFT+WIN+A RELOADS THIS FILE.
