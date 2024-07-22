@@ -272,6 +272,8 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 
 :*?:@lilbits@::https://media1.tenor.com/m/Z64hCFw89QYAAAAd/lil-bits.gif
+:*?:@pisstape@::https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZTdjeWt2emttdGl5eWprdGthMXdtM3MxazlibHI1eGxydDUwaWw0eSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3ohs4mFX5ergKsA7TO/giphy.gif
+:*?:@hailsatan@::https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExazRka2l0dTFtcjB0YW94bnJnbWVxeXloczA4djV4NDkyb205d3ZwZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/yJFHxxW1K7jY4eoQH8/giphy.gif
 
 ;------------------------------------------------------------------------------
 ; SHIFT+WIN+A RELOADS THIS FILE.
