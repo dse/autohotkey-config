@@ -240,8 +240,8 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 :*?:@nodefse@::const fse = require('fs-extra');
 :*?:@nodechildprocess@::const childProcess = require('child-process');
-:*?:@nodespawn@::const { spawn } = require('child-process');
-:*?:@nodespawnsync@::const { spawnSync } = require('child-process');
+:*?:@nodespawn@::const {{} spawn {}} = require('child-process');
+:*?:@nodespawnsync@::const {{} spawnSync {}} = require('child-process');
 
 ; { } at EOL means type a space there
 ; {!} means type an exclamation mark
