@@ -1,4 +1,4 @@
-; -*- coding: utf-8-dos -*-
+﻿; -*- coding: utf-8-with-signature-dos -*-
 ; for AHK 1.1 https://www.autohotkey.com/docs/v1/
 
 #SingleInstance Force
