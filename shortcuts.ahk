@@ -168,6 +168,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :*?C:@^I@::Î                              ; U+00CE LATIN CAPITAL LETTER I WITH CIRCUMFLEX
 :*?C:@`"I@::Ï                              ; U+00CF LATIN CAPITAL LETTER I WITH DIAERESIS
 :*?C:@-D@::Ð                              ; U+00D0 LATIN CAPITAL LETTER ETH
+:*?C:@Eth@::Ð                              ; U+00D0 LATIN CAPITAL LETTER ETH
 :*?C:@~N@::Ñ                              ; U+00D1 LATIN CAPITAL LETTER N WITH TILDE
 :*?C:@``O@::Ò                              ; U+00D2 LATIN CAPITAL LETTER O WITH GRAVE
 :*?C:@'O@::Ó                              ; U+00D3 LATIN CAPITAL LETTER O WITH ACUTE
@@ -181,6 +182,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :*?C:@`"U@::Ü                              ; U+00DC LATIN CAPITAL LETTER U WITH DIAERESIS
 :*?C:@``Y@::Ý                              ; U+00DD LATIN CAPITAL LETTER Y WITH ACUTE
 :*?C:@TH@::Þ                              ; U+00DE LATIN CAPITAL LETTER THORN
+:*?C:@Thorn@::Þ                              ; U+00DE LATIN CAPITAL LETTER THORN
 :*?C:@ss@::ß                              ; U+00DF LATIN SMALL LETTER SHARP S
 :*?C:@``a@::à                              ; U+00E0 LATIN SMALL LETTER A WITH GRAVE
 :*?C:@'a@::á                              ; U+00E1 LATIN SMALL LETTER A WITH ACUTE
@@ -199,6 +201,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :*?C:@^i@::î                              ; U+00EE LATIN SMALL LETTER I WITH CIRCUMFLEX
 :*?C:@`"i@::ï                              ; U+00EF LATIN SMALL LETTER I WITH DIAERESIS
 :*?C:@-d@::ð                              ; U+00F0 LATIN SMALL LETTER ETH
+:*?C:@eth@::ð                              ; U+00F0 LATIN SMALL LETTER ETH
 :*?C:@~n@::ñ                              ; U+00F1 LATIN SMALL LETTER N WITH TILDE
 :*?C:@``o@::ò                              ; U+00F2 LATIN SMALL LETTER O WITH GRAVE
 :*?C:@'o@::ó                              ; U+00F3 LATIN SMALL LETTER O WITH ACUTE
@@ -212,6 +215,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 :*?C:@`"u@::ü                              ; U+00FC LATIN SMALL LETTER U WITH DIAERESIS
 :*?C:@'y@::ý                              ; U+00FD LATIN SMALL LETTER Y WITH ACUTE
 :*?C:@th@::þ                              ; U+00FE LATIN SMALL LETTER THORN
+:*?C:@thorn@::þ                              ; U+00FE LATIN SMALL LETTER THORN
 :*?C:@`"y@::ÿ                              ; U+00FF LATIN SMALL LETTER Y WITH DIAERESIS
 
 :*C?:@OE@::Œ                    ; U+0152 LATIN CAPITAL LIGATURE OE
@@ -320,8 +324,8 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ; https://looks.wtf/flipping-tables
 ; https://slack-tableflip.herokuapp.com/
 ;
-:*?:@shrug@::¯\_(ツ)_/¯
-:*?:@flip@::(╯°□°)╯︵ ┻━┻
+:*?:@shrug@::¯\_(ツ)_/¯         ; U+110000 PERSON SHRUGGING
+:*?:@flip@::(╯°□°)╯︵ ┻━┻       ; U+110001 PERSON FLIPPING A TABLE
 :*?:@`:-)@::☺                   ; U+263A WHITE SMILING FACE
 :*?:@`:-(@::☹                   ; U+2639 WHITE FROWNING FACE
 :*?:@music@::♫                  ; U+266B BEAMED EIGHTH NOTES
